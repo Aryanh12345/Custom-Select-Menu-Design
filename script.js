@@ -1,5 +1,5 @@
 let option = document.querySelector(".option");
-let pss = document.querySelector(".p");
+let p = document.querySelectorAll(".p");
 let select = document.querySelector("#selectField");
 let arrow = document.querySelector("#arrow");
 let content = document.querySelector("#content");
@@ -14,8 +14,11 @@ select.addEventListener("click", () => {
     }
 })
 
-p.addEventListener('click',(e) => {
-    e.preventDefault();
-    content.innerHTML = e.p;
-    console.log(e);
-})
+p.forEach(element => {
+    element.addEventListener('click',(e) => {
+        e.preventDefault();
+        content.innerHTML = e.target.innerText;
+        arrow.style.transform = "rotate(0deg)";
+        option.style.visibility = "hidden";
+    })
+});

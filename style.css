@@ -26,25 +26,21 @@
 }
 #selectField img{
     width: 20px;
-    animation: rotate .8s;
-}
-@keyframes rotate {
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(180deg);
-    }
+    transition: transform 0.5s;
 }
 .option{
     margin-top: 20px;
     background: #ffffffa8;
+    border-radius: 5px;
     visibility: hidden;
 }
 .p{
     padding: 10px 10px;
     display: flex;
     align-items: center;
+}
+.p:hover{
+    background: #ffffffaa;
 }
 .p p{
     padding-left: 10px;
